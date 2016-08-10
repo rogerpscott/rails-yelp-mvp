@@ -1,0 +1,9 @@
+<h1>Fakelp</h1>
+<div>
+  <%= link_to "Add Restaurant", new_restaurant_path, {class: "btn btn-primary"} %>
+</div>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant), {class: "list-group-item"} %></li>
+  <% end %>
+</ul>
